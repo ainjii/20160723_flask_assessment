@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Skills-HTML-CSS
+{% endblock %}
+
+{% block content %}
+    <h1>Thanks for choosing to apply to Ubermelon!</h1>
+    <p>
+        Ubermelon is committed to hiring the smartest employees we can. So fill out our application and show your stuff!
+    </p>
+    <form action="/application_response" method="POST">
+        <label for="field-firstname">First name: </label>
+            <input type="text" name="firstname" id="field-firstname" />
+            <br>
+
+        <label for="field-lastname">Last name: </label>
+            <input type="text" name="lastname" id="field-lastname" />
+            <br>
+            <br>
+
+        <label for="field-position">Which position are you applying for? </label>
+            <br>
+            <select name="position" id="field-position">
+                <option>Software Engineer</option>
+                <option>QA Engineer</option>
+                <option>Product Manager</option>
+            </select>
+            <br>
+            <br>
+
+        <label for="field-salary">What is your salary requirement (whole numbers only)?</label>
+            <br>
+            <input type="text" name="salary" id="field-salary" />
+            <br>
+            <br>
+
+        <input type="submit" />
+    </form>
+{% endblock %}
